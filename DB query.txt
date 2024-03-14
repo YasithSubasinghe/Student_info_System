@@ -1,0 +1,23 @@
+CREATE DATABASE StudentInfo;
+GO
+
+USE StudentInfo;
+GO
+
+CREATE TABLE Student (
+    ID INT,
+    RegisterNum VARCHAR(50) NOT NULL,
+    Name VARCHAR(50),
+    Gender VARCHAR(50),
+    DOB VARCHAR(50),
+    Email VARCHAR(50),
+    Mobile VARCHAR(50),
+    Address VARCHAR(50)
+);
+
+CREATE TABLE logging (
+    username VARCHAR(50),
+    password CHAR(10) NOT NULL
+);
+
+INSERT INTO logging (username, password) VALUES ('admin', '12345');

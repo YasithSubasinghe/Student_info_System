@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;//new
+using System.Data.SqlClient;
 
 namespace Interfaces
 {
@@ -89,7 +89,7 @@ namespace Interfaces
         {
             try
             {
-                string t = @"Data Source=DESKTOP-ADQ7R1U;Initial Catalog=StuInfo;Integrated Security=True;";
+                string t = @"Data Source=Arrow;Initial Catalog=StudentInfo;Integrated Security=True;";//Sql connection
                 SqlConnection con2 = new SqlConnection(t);
                 con2.Open();
                 string gender = string.Empty;
@@ -124,13 +124,13 @@ namespace Interfaces
             
                 else
                 {
-                    String sql = "INSERT INTO Table4(RegisterNum,Name,Gender,DOB,Email,Mobile,Address) VALUES('" + textBox2.Text + "','" + textBox1.Text + "','" + gender + "','" + dateTimePicker1.Text + "','"
+                    String sql = "INSERT INTO Student(RegisterNum,Name,Gender,DOB,Email,Mobile,Address) VALUES('" + textBox2.Text + "','" + textBox1.Text + "','" + gender + "','" + dateTimePicker1.Text + "','"
                         + textBox5.Text + "','" + textBox4.Text + "','" + textBox7.Text + "')";
 
                     SqlCommand cmd = new SqlCommand(sql, con2);
                     cmd.ExecuteNonQuery();
 
-                    String sql1 = "Select max(ID) from Table4";
+                    String sql1 = "Select max(ID) from Student";
                     SqlCommand cmd1 = new SqlCommand(sql1, con2);
                     SqlDataReader dr = cmd1.ExecuteReader();
 
@@ -157,17 +157,13 @@ namespace Interfaces
         }
 
         private void Register_Student_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'stuInfoDataSet5.Students' table. You can move, or remove it, as needed.
-           //this.studentsTableAdapter.Fill(this.stuInfoDataSet5.Students);
+        {   
 
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
-            
-
+           
         }
     }
 }

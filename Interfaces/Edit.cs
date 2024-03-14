@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;//new
+using System.Data.SqlClient;
 
 namespace Interfaces
 {
@@ -21,12 +21,12 @@ namespace Interfaces
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string up = @"Data Source=DESKTOP-ADQ7R1U;Initial Catalog=StuInfo;Integrated Security=True;";
+            string up = @"Data Source=Arrow;Initial Catalog=StudentInfo;Integrated Security=True;";//Sql connection
             using (SqlConnection con = new SqlConnection(up))
             {
                 if (textBox10.Text !="")
                 {
-                    string str = "SELECT Name,Email,Address,Mobile FROM Table4 WHERE RegisterNum = '" + textBox10.Text + "'";
+                    string str = "SELECT Name,Email,Address,Mobile FROM Student WHERE RegisterNum = '" + textBox10.Text + "'";
                     SqlCommand cmd = new SqlCommand(str, con);
                     SqlDataAdapter daa = new SqlDataAdapter(cmd);
                     DataTable dtt = new DataTable();
@@ -45,7 +45,7 @@ namespace Interfaces
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string edit = @"Data Source=DESKTOP-ADQ7R1U;Initial Catalog=StuInfo;Integrated Security=True;";
+            string edit = @"Data Source=Arrow;Initial Catalog=StudentInfo;Integrated Security=True;";//Sql connection
             SqlConnection con4 = new SqlConnection(edit);
             con4.Open();
             if (textBox1.Text != "")
@@ -70,7 +70,7 @@ namespace Interfaces
                     }
                     else
                     {
-                        string str = " update dbo.Table4 set  Name='" + this.textBox2.Text + "', Email='" + this.textBox5.Text + "', Mobile='" + this.textBox4.Text + "'," +
+                        string str = " update dbo.Student set  Name='" + this.textBox2.Text + "', Email='" + this.textBox5.Text + "', Mobile='" + this.textBox4.Text + "'," +
                            "Address='" + this.textBox7.Text + "' where RegisterNum='" + this.textBox1.Text + "';";
 
 

@@ -16,12 +16,8 @@ namespace Interfaces
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
             Application.Run(new Form1());
-            //Application.Run(new Register_Student());
-            //Application.Run(new Remove_Student());
-           //Application.Run(new Edit());
-           //Application.Run(new Report());
+            
         }
     }
 }

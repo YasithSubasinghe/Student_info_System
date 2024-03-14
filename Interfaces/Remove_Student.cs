@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;//new
+using System.Data.SqlClient;
 
 namespace Interfaces
 {
@@ -19,11 +19,11 @@ namespace Interfaces
 
             //Start level-show the all student data in data grid view
 
-               string rem = @"Data Source=DESKTOP-ADQ7R1U;Initial Catalog=StuInfo;Integrated Security=True;";
-               using (SqlConnection con = new SqlConnection(rem))
+            string rem = @"Data Source=Arrow;Initial Catalog=StudentInfo;Integrated Security=True;";//Sql connection
+            using (SqlConnection con = new SqlConnection(rem))
                {
 
-                   string str = "SELECT Name,RegisterNum,Gender,DOB,Address,Email,Mobile FROM Table4";
+                   string str = "SELECT Name,RegisterNum,Gender,DOB,Address,Email,Mobile FROM Student";
                    SqlCommand cmd = new SqlCommand(str, con);
                    SqlDataAdapter da = new SqlDataAdapter(cmd);
                    DataTable dt = new DataTable();
@@ -42,11 +42,11 @@ namespace Interfaces
             }
             else
             {
-                string re = @"Data Source=DESKTOP-ADQ7R1U;Initial Catalog=StuInfo;Integrated Security=True;";
+                string re = @"Data Source=Arrow;Initial Catalog=StudentInfo;Integrated Security=True;";//Sql connection
                 using (SqlConnection con = new SqlConnection(re))
                 {
 
-                    string str = "DELETE FROM Table4 WHERE RegisterNum = '" + textBox8.Text + "'";
+                    string str = "DELETE FROM Student WHERE RegisterNum = '" + textBox8.Text + "'";
                     SqlCommand cmd = new SqlCommand(str, con);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -57,11 +57,11 @@ namespace Interfaces
                 }
                 textBox8.Text = "";
 
-                string rem = @"Data Source=DESKTOP-ADQ7R1U;Initial Catalog=StuInfo;Integrated Security=True;";
+                string rem = @"Data Source=Arrow;Initial Catalog=StudentInfo;Integrated Security=True;";//Sql connection
                 using (SqlConnection con = new SqlConnection(rem))
                 {
 
-                    string str = "SELECT Name,RegisterNum,Gender,DOB,Address,Email,Mobile FROM Table4";
+                    string str = "SELECT Name,RegisterNum,Gender,DOB,Address,Email,Mobile FROM Student";
                     SqlCommand cmd = new SqlCommand(str, con);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -77,8 +77,7 @@ namespace Interfaces
 
         private void Remove_Student_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'stuInfoDataSet1.StuTable' table. You can move, or remove it, as needed.
-           // this.stuTableTableAdapter.Fill(this.stuInfoDataSet1.Table1);
+            
 
         }
 

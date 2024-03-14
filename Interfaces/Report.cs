@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;//new
+using System.Data.SqlClient;
 
 namespace Interfaces
 {
@@ -25,12 +25,12 @@ namespace Interfaces
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string rp = @"Data Source=DESKTOP-ADQ7R1U;Initial Catalog=StuInfo;Integrated Security=True;";
+            string rp = @"Data Source=Arrow;Initial Catalog=StudentInfo;Integrated Security=True;";//Sql connection
             using (SqlConnection con = new SqlConnection(rp))
             {
                 if (textBox1.Text != "")
                 {
-                    string str = "SELECT Name,RegisterNum,Gender,DOB,Address,Email,Mobile FROM Table4 WHERE RegisterNum = '" + textBox1.Text + "'";
+                    string str = "SELECT Name,RegisterNum,Gender,DOB,Address,Email,Mobile FROM Student WHERE RegisterNum = '" + textBox1.Text + "'";
                     SqlCommand cmd = new SqlCommand(str, con);
                     SqlDataAdapter daa = new SqlDataAdapter(cmd);
                     DataTable dtt = new DataTable();
