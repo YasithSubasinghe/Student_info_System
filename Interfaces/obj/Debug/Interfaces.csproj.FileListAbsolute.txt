@@ -1,0 +1,17 @@
+D:\Rad scripts\Interfaces\Interfaces\bin\Debug\Interfaces.exe.config
+D:\Rad scripts\Interfaces\Interfaces\bin\Debug\Interfaces.exe
+D:\Rad scripts\Interfaces\Interfaces\bin\Debug\Interfaces.pdb
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.SuggestedBindingRedirects.cache
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Properties.Resources.resources
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.GenerateResource.cache
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.exe
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.pdb
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Edit.resources
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Form1.resources
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Home.resources
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Register_Student.resources
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Remove_Student.resources
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Stu_Home.resources
+D:\Rad scripts\Interfaces\Interfaces\obj\Debug\Interfaces.Report.resources
